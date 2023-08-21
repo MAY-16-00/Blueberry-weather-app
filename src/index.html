@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Blueberry Weatehr App</title>
+    <script
+      src="https://kit.fontawesome.com/891f206036.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body
+    background="https://images.pexels.com/photos/314726/pexels-photo-314726.jpeg"
+  >
+    <div class="whole-body">
+      <h1>
+        <div class="icons">
+          <div class="row">
+            <div class="col-2">The Weather</div>
+            <div class="col-2">
+              <i class="fa-solid fa-cloud-sun cloud-sun1"></i>
+            </div>
+            <div class="col-2">
+              <i class="fa-solid fa-cloud-sun-rain sun-rain"></i>
+            </div>
+            <div class="col-2">
+              <i class="fa-solid fa-sun sun1"></i>
+            </div>
+            <div class="col-2">
+              <i class="fa-solid fa-cloud-rain cloud-rain"></i>
+            </div>
+            <div class="col-2">
+              <i class="fa-solid fa-cloud-bolt cloud-bolt1"></i>
+            </div>
+          </div>
+        </div>
+      </h1>
+      <div class="form-container">
+        <form id="search-form">
+          <input
+            type="text"
+            placeholder="Enter a city"
+            autofocus="on"
+            id="search-input"
+            class="btn1"
+          />
+          <button type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+      </div>
+      <div class="overview">
+        <h2 id="city">Yangon</h2>
+        <ul>
+          <li id="date">Last updated: Monday 09:00</li>
+          <li id="description">Clear Sky</li>
+        </ul>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <div classs="clearfix">
+            <div class="float-left">
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                alt="clear"
+                id="icon"
+              />
+            </div>
+            <div class="float-left">
+              <span class="degree" id="temperature"><strong>30</strong></span>
+              <span class="units"
+                ><a href="#" id="celsius-link" class="active">°C|</a
+                ><a href="#" id="fahrenheit-link">°F</a></span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <ul>
+            <li>Humidity: <span id="humidity">80</span>%</li>
+            <li>Wind: <span id="wind">22</span>km/h</li>
+          </ul>
+        </div>
+      </div>
+      <div class="weather-forecast" id="forecast"></div>
+    </div>
+    <span class="code"
+      ><a href="https://github.com/MAY-16-00/my-weather-app.git"
+        >Open source code</a
+      >by May Moe Theint Aung</span
+    >
+  </body>
+  <script src="src/app.js"></script>
+</html>
